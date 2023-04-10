@@ -15,12 +15,7 @@ public class GameRun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 10; i++)
-        {
-            count++;
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(-90, 90), Random.Range(-90, 90), 0);
-            Instantiate(enemyPrefab, randomSpawnPosition, Quaternion.identity);
-        }
+
     }
 
     // Update is called once per frame
@@ -28,7 +23,7 @@ public class GameRun : MonoBehaviour
     {
         if (count <= 9)
         {
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(-90, 90), Random.Range(-90, 90), 0);
+            Vector3 randomSpawnPosition = new Vector3(Random.Range(-144, 144), Random.Range(-90, 90), 0);
             Instantiate(enemyPrefab, randomSpawnPosition, Quaternion.identity);
             count++;
         }
